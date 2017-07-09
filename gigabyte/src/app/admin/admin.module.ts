@@ -16,7 +16,7 @@ const AdminRoutes: Routes = [
         component: AdminComponent,
         children:[
             { path: 'login', component: LoginComponent },
-            { path: 'signUp', component: SignUpComponent },
+            { path: 'signup', component: SignUpComponent },
             { path: '', component: AdminMenuComponent, canActivate: [UserService] }
         ]
     }

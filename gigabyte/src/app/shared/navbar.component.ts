@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
                     <div class="top-bar-title">&lt;h1&gt;teq_</div>
                     <div>
                         <ul class="menu">
-                            <li class="nav-menu"><a href="#">Menu Item 1</a></li>
+                            <li class="nav-menu"><a [routerLink]="['/admin']">admin area</a></li>
                         </ul>
                     </div>
                 </div>

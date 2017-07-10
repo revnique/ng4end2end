@@ -9,6 +9,9 @@ import { AppRoutingModule } from './shared/app.routing';
 import {DawgComponent} from './dawg/dawg.component';
 import {AdminModule} from './admin/admin.module';
 
+import {UserService} from './admin/adminShared/user.service';
+import {BlogAdminService} from './admin/adminShared/blog-admin.service';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -21,6 +24,10 @@ import {AdminModule} from './admin/admin.module';
         HomeComponent,
         ErrorComponent,
         DawgComponent
+    ],
+    providers: [
+        UserService,
+        BlogAdminService
     ],
     bootstrap: [ AppComponent ]
 })

@@ -11,11 +11,17 @@ import { SignUpComponent } from './signUp/sign-up.component';
 import {UserService} from './adminShared/user.service';
 import {BlogAdminService} from './adminShared/blog-admin.service';
 
+import {BlogAdminComponent} from './blogAdmin/blog-admin.component';
+import {BlogAddComponent} from './blogAdd/blog-add.component';
+
+import {TruncatePipe} from './adminShared/trunc.pipe';
+
 const AdminRoutes: Routes = [
     {
         path: 'admin',
         component: AdminComponent,
         children:[
+            { path: 'blog-admin', component: BlogAdminComponent, canActivate: [UserService] },
             { path: 'login', component: LoginComponent },
             { path: 'signup', component: SignUpComponent },
             { path: '', component: AdminMenuComponent, canActivate: [UserService] }
@@ -30,13 +36,17 @@ const AdminRoutes: Routes = [
         RouterModule.forChild(AdminRoutes)
     ],
     exports:[
-        RouterModule
+        RouterModule,
+        TruncatePipe
     ],
     declarations:[
         AdminComponent,
         AdminMenuComponent,
         LoginComponent,
-        SignUpComponent
+        SignUpComponent,
+        BlogAdminComponent,
+        BlogAddComponent,
+        TruncatePipe
     ],
     providers:[
         UserService,

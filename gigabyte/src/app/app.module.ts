@@ -8,6 +8,7 @@ import { ErrorComponent } from './error/error.component';
 import { AppRoutingModule } from './shared/app.routing';
 import {DawgComponent} from './dawg/dawg.component';
 import {AdminModule} from './admin/admin.module';
+import {BlogDetailComponent} from './blogDetail/blog-detail.component';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import {AdminModule} from './admin/admin.module';
         NavComponent,
         HomeComponent,
         ErrorComponent,
-        DawgComponent
+        DawgComponent,
+        BlogDetailComponent
     ],
     bootstrap: [ AppComponent ]
 })
